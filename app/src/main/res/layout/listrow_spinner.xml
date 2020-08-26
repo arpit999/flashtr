@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlSelectAlbum"
+    android:layout_width="match_parent"
+    android:background="@color/background_color"
+    android:layout_height="100dp">
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/mlSelectAlbumRow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:paddingLeft="15dp"
+                android:gravity="center_vertical"
+                android:layout_centerInParent="true"
+                >
+                <RelativeLayout
+                    android:id="@+id/rlTitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:id="@+id/rlAlbumName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/tvTitle"
+                            android:singleLine="true"
+                            android:textSize="18sp"
+                            android:textColor="@color/text_color"
+                            android:text="Name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlDateInner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rlAlbumName"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/tvMember"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:singleLine="true"
+                            android:text="Member"
+                            android:textColor="@color/text_color"/>
+
+                        <TextView
+                            android:id="@+id/tvPhoto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:singleLine="true"
+                            android:layout_toRightOf="@+id/tvMember"
+                            android:text="Photo"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_color"/>
+                        <TextView
+                            android:id="@+id/tvDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/tvPhoto"
+                            android:paddingRight="15dp"
+                            android:gravity="right"
+                            android:singleLine="true"
+                            android:text="Date"
+                            android:layout_alignParentRight="true"
+                            android:paddingLeft="5dp"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_color"/>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </RelativeLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="5dp"
+                android:background="@color/white"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+
+</RelativeLayout>

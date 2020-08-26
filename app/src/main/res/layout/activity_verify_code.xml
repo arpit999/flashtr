@@ -1,0 +1,156 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_txtHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:padding="10sp"
+        android:text="@string/str_new_header2"
+        android:textColor="@color/nText_color_orange"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="35dp"
+        android:gravity="center|center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/str_new_login2"
+            android:textColor="@color/nText_color_grey"
+            android:textSize="22sp" />
+
+        <RelativeLayout
+            android:id="@+id/rlMobile"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/etCode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:gravity="center_vertical|center"
+                android:hint="@string/str_verify_hint"
+                android:inputType="numberPassword"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/nTextHint_color_grey"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/gray" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:background="@color/blue"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/rlBack"
+                android:layout_width="0dp"
+                android:layout_weight="0.25"
+                android:layout_height="match_parent"
+                app:mrl_rippleBackground="@color/nButton_color_orange"
+                app:mrl_rippleColor="@color/nRippleColor">
+
+                <TextView
+                    android:id="@+id/tvBack"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:padding="13dp"
+                    android:text="BACK"
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/nRippleNonTouchBG"
+                android:layout_weight="0.03"/>
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/rlResend"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.44"
+                app:mrl_rippleBackground="@color/nButton_color_orange"
+                app:mrl_rippleColor="@color/nRippleColor">
+
+                <TextView
+                    android:id="@+id/tvResend"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:padding="13dp"
+                    android:text="RESEND"
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+            </com.balysv.materialripple.MaterialRippleLayout>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/nRippleNonTouchBG"
+                android:layout_weight="0.03"/>
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/rlSubmit"
+                android:layout_width="0dp"
+                android:layout_weight="0.25"
+                android:layout_height="match_parent"
+                app:mrl_rippleBackground="@color/nButton_color_orange"
+                app:mrl_rippleColor="@color/nRippleColor">
+
+                <TextView
+                    android:id="@+id/tvNext"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:padding="13dp"
+                    android:text="@string/str_next"
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+            </com.balysv.materialripple.MaterialRippleLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_txtHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:padding="10sp"
+        android:text="@string/str_new_header1"
+        android:textColor="@color/nText_color_orange"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/llCenterLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="35dp"
+        android:gravity="center_vertical|center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/str_new_login1"
+            android:textColor="@color/nText_color_grey"
+            android:textSize="22sp" />
+
+        <RelativeLayout
+            android:id="@+id/rlMobile"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/etMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/transparent"
+                android:gravity="center_vertical|center"
+                android:hint="@string/str_mobile_hint"
+                android:inputType="phone"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/nTextHint_color_grey"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/gray" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/nRippleNonTouchBG"
+        android:gravity="right"
+        android:orientation="vertical">
+
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/rlSubmit"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                app:mrl_rippleBackground="@color/nButton_color_orange"
+                app:mrl_rippleColor="@color/nRippleColor">
+
+                <com.flashtr.util.SegoeuiTextView
+                    android:id="@+id/tvLogin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:padding="13dp"
+                    android:text="@string/str_next"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </com.balysv.materialripple.MaterialRippleLayout>
+    </LinearLayout>
+</RelativeLayout>

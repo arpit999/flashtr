@@ -1,0 +1,12 @@
+.gradle
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+app/build
+mediaChooserlib/build
+.idea
+app/app.iml
+mediaChooserlib/mediaChooserlib.iml
+flashtr.iml

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rel_header"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:background="@color/nRippleHeaderBG">
+
+            <TextView
+                android:id="@+id/tv_txtHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@+id/rlLogo"
+                android:text="@string/str_new_header7"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_gridChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@color/nRippleHeaderBG"
+            android:orientation="horizontal">
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/rlGrid"
+                android:layout_width="35dp"
+                android:layout_height="55dp"
+                android:layout_marginRight="10dp"
+                app:mrl_rippleBackground="@color/nRippleHeaderBG"
+                app:mrl_rippleColor="@color/nRippleColor">
+
+                <ImageView
+                    android:id="@+id/iv_imGrid"
+                    android:layout_width="35dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:padding="7dp"
+                    android:src="@drawable/grid_icon" />
+            </com.balysv.materialripple.MaterialRippleLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- <android.support.v4.widget.SwipeRefreshLayout
+         android:id="@+id/swiperefreshlayout"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/header"
+         >-->
+
+    <ImageView
+        android:id="@+id/no_data_found"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:src="@drawable/no_image1"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/progressBar5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+       <android.support.v7.widget.RecyclerView
+            android:id="@+id/favListView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+           android:background="@android:color/white"
+            android:visibility="visible"></android.support.v7.widget.RecyclerView>
+        <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+
+        <GridView
+            android:id="@+id/gridFavs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:columnWidth="120dp"
+            android:gravity="center"
+            android:horizontalSpacing="5dp"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="3"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="5dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/rel_header"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:background="@color/nRippleHeaderBG">
+
+            <TextView
+                android:id="@+id/tv_txtHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@+id/rlLogo"
+                android:text="@string/str_new_header4"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/rel_header2"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:background="@color/blue"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/rlLogout"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                app:mrl_rippleBackground="@color/nRippleHeaderBG"
+                app:mrl_rippleColor="@color/nRippleColor">
+
+                <ImageView
+                    android:id="@+id/ivLogout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:src="@drawable/logout" />
+            </com.balysv.materialripple.MaterialRippleLayout>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rel_header">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/lin_profileEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/rel_acoountHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/nSettingBGTitle">
+
+                        <TextView
+                            android:id="@+id/tv_txtTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="@string/str_new_acc"
+                            android:textColor="@color/nSettingsText"
+                            android:textSize="16sp" />
+
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@android:color/black" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <com.flashtr.util.CircleImageView
+                            android:id="@+id/iv_imgProfile"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/rounded_gray"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/default_profile" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <com.balysv.materialripple.MaterialRippleLayout
+                                android:id="@+id/rlEditProfile"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.5">
+
+                                <TextView
+                                    android:id="@+id/tv_txtName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_vertical"
+                                    android:paddingLeft="10dp"
+                                    android:paddingTop="10dp"
+                                    android:text="@string/str_new_edit_prof"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="16sp" />
+                            </com.balysv.materialripple.MaterialRippleLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="@color/black" />
+
+                            <com.balysv.materialripple.MaterialRippleLayout
+                                android:id="@+id/rlUpdateNo"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.5">
+
+                                <TextView
+                                    android:id="@+id/tv_txtEditProfile"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="10dp"
+                                    android:text="@string/str_new_update_num"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="16sp" />
+                            </com.balysv.materialripple.MaterialRippleLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/v2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/lin_profileEdit"
+                    android:background="@android:color/black" />
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:id="@+id/rel_acoountHeader2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/v2"
+                    android:background="@color/nSettingBGTitle"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tv_txtTitle2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="30dp"
+                        android:text="@string/str_new_abt"
+                        android:textColor="@color/nSettingsText"
+                        android:textSize="16sp" />
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+                <View
+                    android:id="@+id/v5"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/rel_acoountHeader2"
+                    android:background="@android:color/black" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/v5"
+                    android:background="@color/background_color"
+                    android:orientation="vertical">
+
+                    <View
+                        android:id="@+id/vwTop"
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="@color/white"
+                        android:visibility="gone" />
+
+                    <!--<com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/rlUpdateNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp">
+
+                            <ImageView
+                                android:id="@+id/ivUpdateNumber"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/ic_update_number" />
+
+                            <TextView
+                                android:id="@+id/tvUpdateNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/ivUpdateNumber"
+                                android:gravity="center_vertical"
+                                android:singleLine="true"
+                                android:text="Update Mobile Number"
+                                android:textColor="@color/text_color"
+                                android:textSize="17sp" />
+                        </RelativeLayout>
+
+
+                    </com.balysv.materialripple.MaterialRippleLayout>-->
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/white"
+                        android:visibility="gone" />
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/rlFeedback"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        app:mrl_rippleBackground="@android:color/white"
+                        app:mrl_rippleColor="@color/nRippleColor">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp">
+
+                            <ImageView
+                                android:id="@+id/ivFeedback"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/round_corner_about"
+                                android:padding="2dp"
+                                android:src="@drawable/feedback" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/ivFeedback"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvFeedback"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="44dp"
+                                    android:layout_centerVertical="true"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="10dp"
+                                    android:singleLine="true"
+                                    android:text="@string/str_new_feedback"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="16sp" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:background="@android:color/black" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/rlShare"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        app:mrl_rippleBackground="@android:color/white"
+                        app:mrl_rippleColor="@color/nRippleColor">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp">
+
+                            <ImageView
+                                android:id="@+id/ivShare"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/round_corner_about"
+                                android:padding="2dp"
+                                android:src="@drawable/shareapp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/ivShare"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/ivFeedback"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvShare"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="44dp"
+                                        android:layout_centerVertical="true"
+                                        android:layout_toRightOf="@+id/ivShare"
+                                        android:gravity="center_vertical"
+                                        android:paddingLeft="10dp"
+                                        android:singleLine="true"
+                                        android:text="@string/str_new_shApp"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="16sp" />
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0.5dp"
+                                        android:background="@android:color/black" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/rlReview"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:paddingLeft="10dp"
+                        app:mrl_rippleBackground="@android:color/white"
+                        app:mrl_rippleColor="@color/nRippleColor">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:id="@+id/ivReview"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/round_corner_about"
+                                android:padding="2dp"
+                                android:src="@drawable/rate_us" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/ivReview"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvReview"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="44dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toRightOf="@+id/ivReview"
+                                    android:gravity="center_vertical"
+                                    android:singleLine="true"
+                                    android:text="@string/str_new_rateApp"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="16sp" />
+
+
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+                    <View
+                        android:id="@+id/v3"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@+id/lin_profileEdit"
+                        android:background="@android:color/black" />
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/rel_acoountHeader3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/v3"
+                        android:background="@color/nSettingBGTitle"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/tv_txtTitle3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="30dp"
+                            android:text="@string/str_new_help"
+                            android:textColor="@color/nSettingsText"
+                            android:textSize="16sp" />
+
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+                    <View
+                        android:id="@+id/v6"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@android:color/black" />
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/rlTips"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        app:mrl_rippleBackground="@android:color/white"
+                        app:mrl_rippleColor="@color/nRippleColor">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp">
+
+                            <ImageView
+                                android:id="@+id/ivTips"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/round_corner_help"
+                                android:padding="2dp"
+                                android:src="@drawable/help" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/ivTips"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvTips"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="44dp"
+                                    android:layout_centerVertical="true"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="10dp"
+                                    android:singleLine="true"
+                                    android:text="@string/str_new_tips"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="16sp" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:background="@android:color/black" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/rlContactUs"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        app:mrl_rippleBackground="@android:color/white"
+                        app:mrl_rippleColor="@color/nRippleColor">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp">
+
+                            <ImageView
+                                android:id="@+id/ivContactUs"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/round_corner_help"
+                                android:padding="2dp"
+                                android:src="@drawable/contact_us" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/ivContactUs"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvContactUs"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="44dp"
+                                    android:layout_centerVertical="true"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="10dp"
+                                    android:singleLine="true"
+                                    android:text="@string/str_new_contactus"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="16sp" />
+
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+                    <View
+                        android:id="@+id/v7"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@+id/lin_profileEdit"
+                        android:background="@android:color/black" />
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/rel_acoountHeader4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/v7"
+                        android:background="@color/nSettingBGTitle">
+
+                        <TextView
+                            android:id="@+id/tv_txtTitle4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="30dp"
+                            android:text="@string/str_new_general"
+                            android:textColor="@color/nSettingsText"
+                            android:textSize="16sp" />
+
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+                    <View
+                        android:id="@+id/v4"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@+id/lin_profileEdit"
+                        android:background="@android:color/black" />
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/rlFlashtr"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        app:mrl_rippleBackground="@android:color/white"
+                        app:mrl_rippleColor="@color/nRippleColor">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp">
+
+                            <ImageView
+                                android:id="@+id/ivFlashtr"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/rouded_corner_orange"
+                                android:src="@drawable/terms_conditions"
+                                android:visibility="visible" />
+
+                            <LinearLayout
+                                android:id="@+id/lin_version"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/ivFlashtr"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tvFlashtr"
+                                    android:layout_width="0dp"
+                                    android:layout_height="44dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_weight="0.7"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="10dp"
+                                    android:singleLine="true"
+                                    android:text="@string/str_new_version"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/tvFlashtrVersion"
+                                    android:layout_width="0dp"
+                                    android:layout_height="44dp"
+                                    android:layout_weight="0.3"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:singleLine="true"
+                                    android:text=""
+                                    android:textColor="@color/nText_color_grey"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:layout_below="@+id/lin_version"
+                                android:layout_toRightOf="@+id/ivFlashtr"
+                                android:background="@android:color/black"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+                    </com.balysv.materialripple.MaterialRippleLayout>
+                    <View
+                        android:id="@+id/v8"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@+id/lin_profileEdit"
+                        android:background="@android:color/black" />
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/rlTerms"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:visibility="visible"
+                        app:mrl_rippleBackground="@color/nSettingBGTitle"
+                        app:mrl_rippleColor="@color/nRippleColor">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:visibility="gone">
+
+
+                            <ImageView
+                                android:id="@+id/ivTerms"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/rouded_corner_orange"
+                                android:src="@drawable/terms_conditions"
+                                android:visibility="visible" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/ivTerms"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvTerms"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="44dp"
+                                    android:layout_centerVertical="true"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="10dp"
+                                    android:singleLine="true"
+                                    android:text="@string/str_new_terms"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="16sp" />
+
+
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@android:color/black" />
+
+                </LinearLayout>
+
+                <SeekBar
+                    android:id="@+id/seekBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/linearLayout"
+                    android:visibility="gone" />
+
+                <!--<com.balysv.materialripple.MaterialRippleLayout
+                    android:id="@+id/rlLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/red"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:id="@+id/tvLogout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical|center"
+                        android:singleLine="true"
+                        android:text="Logout"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </com.balysv.materialripple.MaterialRippleLayout>-->
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</LinearLayout>

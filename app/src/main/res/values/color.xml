@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="transparent">#00000000</color>
+    <color name="black">#000</color>
+    <color name="light_black">#66000000</color>
+    <color name="white">#fff</color>
+    <color name="gray_selected">#d9d9d9</color>
+    <color name="text_color">#646464</color>
+    <color name="text_color_light">#e9e9e9</color>
+    <color name="text_color_gray">#7D7D7D</color>
+    <color name="green">#00B050</color>
+    <color name="red">#FF1414</color>
+    <color name="yellow">#FDCB00</color>
+    <color name="light_yellow">#ffe699</color>
+    <color name="blue">#0092BD</color>
+    <color name="blueStatic">#255873</color>
+    <color name="option_menu_bg">#303030</color>
+    <color name="divider_color">#FFFFFF</color>
+    <!--<color name="colorControlHighlight">#d9d9d9</color>-->
+    <!--<color name="colorPrimary">#dfb200</color>-->
+    <color name="background_color">#F1F1F1</color>
+
+    <!-- New design Color Srings -->
+    <color name="nButton_color_orange">#E61B00</color>
+    <color name="nText_color_orange">#FF4600</color>
+    <color name="nText_color_grey">#747474</color>
+    <color name="nTextHint_color_grey">#80747474</color>
+    <color name="nRippleColor">#80000000</color>
+    <color name="nSearchBoxColor">#BBAAAAAA</color>
+    <color name="nRippleNonTouchBG">#FF4600</color>
+    <color name="nRippleHeaderBG"><!--#FF4600-->#F0F0F0</color>
+    <color name="nBtnCameraOption">#FF4600</color>
+    <color name="nOverScrollMode">#FF4600</color>
+    <color name="transparent_white">#BBFFFFFF</color>
+    <color name="light_black_AA">#AA000000</color>
+    <color name="gray">#dddddd</color>
+
+    <color name="tabTextColorSelected">#FFFFFF</color>
+    <color name="tabTextColorNormal">#FFFFFF</color>
+    <color name="tabColorNormal">#240204</color>
+    <color name="tabColorSelected">#FF4600</color>
+
+    <color name="nSettingBGTitle">#ECEBF1</color>
+
+    <color name="nOddColorListing">#EE5351</color>
+    <color name="nEvenColorListing">#EC407A</color>
+
+    <color name="nSettingsText">#737373</color>
+
+</resources>

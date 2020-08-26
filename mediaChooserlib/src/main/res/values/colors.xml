@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Gallery thumbnail background -->
+
+    <color name="headerbar_color">#fecb00</color>
+    <color name="tabs_color">#fecb00</color>
+    <color name="tabs_title_color">#FFFFFF</color>
+    <color name="headerbar_title_color">#FFFFFF</color>
+    <color name="headerbar_selected_tab_color">#ffe699</color>
+    <color name="background_color">#F1F1F1</color>
+    <color name="text_color">#646464</color>
+</resources>

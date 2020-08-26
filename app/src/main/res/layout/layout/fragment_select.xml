@@ -1,0 +1,138 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:id="@+id/lin_header"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:id="@+id/linChangeAlbum"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/lin_add"
+            android:orientation="horizontal">
+
+
+            <RelativeLayout
+                android:id="@+id/rlResend"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/nRippleHeaderBG">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/tv_txtHeader"
+                        android:layout_width="fill_parent"
+                        android:layout_height="55dp"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:singleLine="true"
+                        android:text="SELECT ALBUM"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+
+
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/rlCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/lin_edtProfile"
+            android:background="@color/nRippleHeaderBG"
+            android:orientation="horizontal">
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:mrl_rippleBackground="@color/nRippleHeaderBG"
+                app:mrl_rippleColor="@color/nRippleColor">
+
+                <TextView
+                    android:id="@+id/txt_Cancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center"
+                    android:text="Cancel"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/black"/>
+            </com.balysv.materialripple.MaterialRippleLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_edtProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/rlEditAlbum"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:visibility="gone"
+                app:mrl_rippleBackground="@color/nRippleHeaderBG"
+                app:mrl_rippleColor="@color/nRippleColor">
+
+                <ImageView
+                    android:id="@+id/iv_imgEditAlbum"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:src="@drawable/edit_profile" />
+            </com.balysv.materialripple.MaterialRippleLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/albumList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/lin_header"
+        android:visibility="visible"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:background="@android:color/white">
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/tv_txtNoData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lin_header"
+        android:gravity="center"
+        android:text="No album found"
+        android:background="@android:color/white"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar7"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

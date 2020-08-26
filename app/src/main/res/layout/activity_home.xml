@@ -1,0 +1,261 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Framelayout to display Fragments -->
+
+        <FrameLayout
+            android:id="@+id/frame_container1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/rlHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:orientation="horizontal"
+                    android:background="@color/background_color">
+
+                    <RelativeLayout
+                        android:id="@+id/rlTopLogo"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:background="@color/yellow">
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:id="@+id/rlLogo"
+                            android:layout_width="55dp"
+                            android:layout_height="match_parent"
+
+                            >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center">
+                                <ImageView
+                                    android:id="@+id/back"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_centerInParent="true"
+                                    android:clickable="false"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false" />
+
+                            </LinearLayout>
+                        </com.balysv.materialripple.MaterialRippleLayout>
+                    </RelativeLayout>
+
+
+
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/rlAlbumHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        >
+
+                        <TextView
+                            android:id="@+id/tvAlbumName"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="10dp"
+                            android:singleLine="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/text_color"
+                            android:textSize="17sp" />
+
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/rlGrid"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_toLeftOf="@+id/rlMenu"
+                        android:visibility="gone"
+                        >
+
+                        <ImageButton
+                            android:id="@+id/imgGrid"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:layout_gravity="center"
+                            android:focusableInTouchMode="false" />
+
+                    </RelativeLayout>
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/rlMenu"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:layout_width="5dp"
+                            android:layout_height="20dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/menu_icon"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:layout_gravity="center"
+                            android:focusableInTouchMode="false" />
+
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+
+                </LinearLayout>
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/rlHeader" />
+            </RelativeLayout>
+        </FrameLayout>
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+            <!--<FrameLayout-->
+                <!--android:id="@+id/flCameraView"-->
+                <!--android:layout_width="55dp"-->
+                <!--android:layout_height="65dp"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:foregroundGravity="left"-->
+                <!--android:background="@color/background_color">-->
+                <!--<ImageView-->
+                    <!--android:layout_width="30dp"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:padding="10dp"-->
+                    <!--android:layout_gravity="center_vertical|center"-->
+                    <!--android:background="@drawable/ic_camera"/>-->
+            <!--</FrameLayout>-->
+        <!--</RelativeLayout>-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:background="@color/background_color"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_marginLeft="30dp"
+                        >
+                        <ImageView
+                            android:id="@+id/imgEditProfile"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:layout_centerInParent="true"
+                            android:background="@color/gray_selected"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_profile"/>
+
+                    </RelativeLayout>
+
+                    <!--<View-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_weight="1.0"-->
+                         <!--/>-->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="80dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingBottom="20dp" >
+
+                        <TextView
+                            android:id="@+id/tvUserName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.0"
+                            android:text="User Name"
+                            android:gravity="center_vertical"
+                            android:textSize="20sp" />
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:id="@+id/mlEditButton"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right"
+                            >
+                            <ImageView
+                                android:id="@+id/ivEditButton"
+                                android:layout_width="37dp"
+                                android:layout_height="37dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_edit"
+                                android:padding="5dp"
+                                android:layout_margin="10dp"
+                                />
+                        </com.balysv.materialripple.MaterialRippleLayout>
+
+                    </LinearLayout>
+
+                    <!--<View-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_weight="1" />-->
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/divider_color" />
+
+                <ListView
+                    android:id="@+id/list_slidermenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/background_color"
+                    android:choiceMode="singleChoice"
+                    android:footerDividersEnabled="false"
+                    android:scrollbars="none" />
+            </LinearLayout>
+
+        </ScrollView>
+    </android.support.v4.widget.DrawerLayout>
+
+</RelativeLayout>

@@ -1,0 +1,151 @@
+<resources>
+
+    <!--<style name="generalnotitle" parent="android:Theme.Light">-->
+    <style name="generalnotitle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:textViewStyle">@style/SEGOEUITextViewStyle</item>
+        <item name="android:buttonStyle">@style/SEGOEUIButtonStyle</item>
+        <item name="android:editTextStyle">@style/SEGOEUIEditTextViewStyle</item>
+
+        <!-- colorPrimary is used for the default action bar background -->
+        <item name="colorPrimary">#aaaaaa</item>
+
+        <!-- colorPrimaryDark is used for the status bar -->
+        <item name="colorPrimaryDark">#80000000</item>
+
+        <!-- colorAccent is used as the default value for colorControlActivated
+             which is used to tint widgets -->
+        <item name="colorAccent">#20000000</item>
+
+    </style>
+
+    <style name="MyTheme" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:alertDialogStyle">@style/CustomAlertDialogStyle</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:layout_margin">0dp</item>
+    </style>
+
+    <!--<style name="MyTheme" parent="android:Theme.Holo.Light.Dialog">-->
+    <!--<item name="android:alertDialogStyle">@style/CustomAlertDialogStyle</item>-->
+    <!--<item name="android:windowBackground">@color/transparent</item>-->
+    <!--<item name="android:windowTitleStyle">@null</item>-->
+    <!--<item name="android:textColorPrimary">#FFFFFF</item>-->
+    <!--<item name="android:windowNoTitle">true</item>-->
+    <!--<item name="android:backgroundDimEnabled">false</item>-->
+    <!--<item name="android:textColor">#FFFFFF</item>-->
+    <!--<item name="android:textStyle">normal</item>-->
+    <!--<item name="android:textSize">12sp</item>-->
+    <!--<item name="android:gravity">center</item>-->
+    <!--<item name="android:title">@string/app_name</item>-->
+    <!--<item name="android:dialogMessage">Loading...</item>-->
+    <!--<item name="android:layout_gravity">center</item>-->
+    <!--<item name="android:windowFrame">@null</item>-->
+    <!--<item name="android:windowIsFloating">true</item>-->
+    <!--<item name="android:windowContentOverlay">@null</item>-->
+    <!--<item name="android:background">@android:color/transparent</item>-->
+    <!--</style>-->
+
+    <style name="DialogTheme" parent="android:Theme.Holo.Light.DialogWhenLarge.NoActionBar">
+        <item name="android:alertDialogStyle">@style/CustomAlertDialogStyle</item>
+        <item name="android:windowBackground">@color/transparent</item>
+    </style>
+
+    <style name="DialogTheme1" parent="@android:style/Theme.Holo.Dialog">
+
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="CustomAlertDialogStyle">
+        <item name="android:bottomBright">@color/light_black</item>
+        <item name="android:bottomDark">@color/light_black</item>
+        <item name="android:bottomMedium">@color/light_black</item>
+        <item name="android:centerBright">@color/light_black</item>
+        <item name="android:centerDark">@color/light_black</item>
+        <item name="android:centerMedium">@color/light_black</item>
+        <item name="android:fullBright">@drawable/progress
+        </item>
+        <item name="android:fullDark">@drawable/progress</item>
+        <item name="android:topBright">@color/light_black</item>
+        <item name="android:topDark">@color/light_black</item>
+    </style>
+
+    <style name="btn">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="title_bar">
+        <item name="android:textColor">#d9f3ff</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="SEGOEUITextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">SEGOEUI</item>
+    </style>
+
+    <style name="SEGOEUIButtonStyle" parent="android:Widget.Holo.Button">
+        <item name="android:fontFamily">SEGOEUI</item>
+    </style>
+
+    <style name="SEGOEUIEditTextViewStyle" parent="android:Widget.EditText">
+        <item name="android:fontFamily">SEGOEUI</item>
+    </style>
+
+    <!-- Tab Imageview style Style -->
+    <style name="tabImageviewStyle" parent="AppTheme">
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+    </style>
+
+    <!-- Tab Imageview style Style -->
+    <style name="tabTxtStyle" parent="AppTheme">
+        <item name="android:textColor">@color/tabTextColorNormal</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:layout_marginBottom">3dp</item>
+    </style>
+   <!-- <style name="AdobeImageBaseTheme.Promo" parent="@style/AdobeImageBaseTheme.Light.Dialog">
+        <item name="windowFixedWidthMajor">500dp</item>
+        <item name="windowFixedWidthMinor">200dp</item>
+        <item name="windowFixedHeightMajor">300dp</item>
+        <item name="windowFixedHeightMinor">150dp</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@style/AdobeImageWidget.DialogAnimation.PromoDialog</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>-->
+
+    <style name="OverrideMultipleImageSelectTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/nRippleHeaderBG</item>
+        <item name="colorPrimaryDark">#888888</item>
+        <item name="colorAccent">@color/nRippleHeaderBG</item>
+        <item name="actionModeStyle">@style/OverrideCustomActionModeStyle</item>
+        <item name="android:textSize">16sp</item>
+        <item name="windowActionModeOverlay">true</item>
+    </style>
+    <style name="OverrideCustomActionModeStyle" parent="Base.Widget.AppCompat.ActionMode">
+        <item name="background">@color/nRippleHeaderBG</item>
+    </style>
+    <style name="OverrideCustomToolbarTheme" parent="Base.ThemeOverlay.AppCompat.ActionBar">
+    </style>
+
+</resources>

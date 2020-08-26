@@ -1,0 +1,504 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+
+    <RelativeLayout
+        android:id="@+id/lin_header"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:id="@+id/linChangeAlbum"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/lin_add"
+            android:orientation="horizontal">
+
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/rlResend"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:mrl_rippleBackground="@color/nRippleHeaderBG"
+                app:mrl_rippleColor="@color/nRippleColor">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/tvChangeAlbum"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_centerInParent="true"
+                        android:layout_weight="0.5"
+                        android:gravity="bottom|left"
+                        android:paddingLeft="5dp"
+                        android:singleLine="true"
+                        android:text="@string/change_album"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5">
+
+                        <TextView
+                            android:id="@+id/tvAlbubName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="top|left"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text="@string/str_resend"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="18dp"
+                            android:layout_alignTop="@+id/tvAlbubName"
+                            android:layout_alignBottom="@+id/tvAlbubName"
+                            android:src="@drawable/down_arrow"
+                            android:layout_marginLeft="5dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_toRightOf="@+id/tvAlbubName"/>
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </com.balysv.materialripple.MaterialRippleLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_add"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/lin_gridChange"
+            android:orientation="horizontal">
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/rlAdd"
+                android:layout_width="35dp"
+                android:layout_height="55dp"
+                app:mrl_rippleBackground="@color/nRippleHeaderBG"
+                app:mrl_rippleColor="@color/nRippleColor">
+
+                <ImageView
+                    android:id="@+id/iv_imgAdd"
+                    android:layout_width="35dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:padding="7dp"
+                    android:src="@drawable/plus_white" />
+            </com.balysv.materialripple.MaterialRippleLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_gridChange"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/lin_edtProfile"
+            android:background="@color/nRippleHeaderBG"
+            android:orientation="horizontal">
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/rlGrid"
+                android:layout_width="35dp"
+                android:layout_height="55dp"
+                android:layout_marginRight="10dp"
+                app:mrl_rippleBackground="@color/nRippleHeaderBG"
+                app:mrl_rippleColor="@color/nRippleColor">
+
+                <ImageView
+                    android:id="@+id/iv_imGrid"
+                    android:layout_width="35dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:padding="7dp"
+                    android:src="@drawable/grid_icon" />
+            </com.balysv.materialripple.MaterialRippleLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_edtProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/rlEditAlbum"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:visibility="gone"
+                app:mrl_rippleBackground="@color/nRippleHeaderBG"
+                app:mrl_rippleColor="@color/nRippleColor">
+
+                <ImageView
+                    android:id="@+id/iv_imgEditAlbum"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:src="@drawable/edit_profile" />
+            </com.balysv.materialripple.MaterialRippleLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/lin_header"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:id="@+id/rlShared"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <!--<ImageButton-->
+                <!--android:id="@+id/img1"-->
+                <!--android:layout_width="30dp"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:background="@drawable/shared_pics"-->
+                <!--android:clickable="false"-->
+                <!--android:focusable="false"-->
+                <!--android:focusableInTouchMode="false" />-->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:text="Synced Photos"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#AAAAAA" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlRecent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <!--<ImageButton-->
+                <!--android:id="@+id/img2"-->
+                <!--android:layout_width="30dp"-->
+                <!--android:layout_height="27dp"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:background="@drawable/recent_pics"-->
+                <!--android:clickable="false"-->
+                <!--android:focusable="false"-->
+                <!--android:focusableInTouchMode="false" />-->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Offline Photos"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#AAAAAA"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/tvError"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/no_image1"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tvErrorTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:text="No Internet Connection"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"/>
+
+    <!--<com.flashtr.pulltorefresh.PullToRefreshView
+        android:id="@+id/pull_refresh_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header" />-->
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:layout_below="@+id/header"
+        android:visibility="gone">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/pull_refresh_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"></android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/tvCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:singleLine="true"
+        android:textColor="@color/text_color"
+        android:textSize="15sp"
+        android:background="@android:color/white"
+        android:visibility="gone" />
+
+    <!--<ListView
+        android:id="@+id/lvRecentPhotos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvCount"
+        android:visibility="gone" />-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/lvRecentPhotos1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/tvCount"
+        android:background="@android:color/white"
+        android:visibility="gone"></android.support.v7.widget.RecyclerView>
+
+
+    <GridView
+        android:id="@+id/gridRecentPhotos"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/tvCount"
+        android:layout_margin="5dp"
+        android:columnWidth="120dp"
+        android:gravity="center"
+        android:horizontalSpacing="5dp"
+        android:listSelector="#00000000"
+        android:numColumns="3"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp"
+        android:visibility="gone" />
+
+    <GridView
+        android:id="@+id/gridSharedPhotos"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/tvCount"
+        android:layout_margin="5dp"
+        android:columnWidth="120dp"
+        android:gravity="center"
+        android:horizontalSpacing="5dp"
+        android:listSelector="#00000000"
+        android:numColumns="3"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/flTopLayer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#80000000"
+        android:clickable="false"
+        android:visibility="gone">
+        <!--<WebView-->
+        <!--android:id="@+id/wvTouchDisable"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@android:color/transparent">-->
+
+        <!--</WebView>-->
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/flSelectOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rlGallery"
+                android:layout_width="130dp"
+                android:layout_height="55dp"
+                android:gravity="center|center_vertical">
+
+                <ImageView
+                    android:id="@+id/ivGallery"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="3dp" />
+
+                <TextView
+                    android:id="@+id/tvOptGallery"
+                    android:layout_width="55dp"
+                    android:layout_height="22dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/ivGallery"
+                    android:background="@drawable/round_corner"
+                    android:gravity="center_vertical|center"
+                    android:padding="2dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:text="Gallery"
+                    android:textColor="@color/blue"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:background="@color/white" />-->
+            <RelativeLayout
+                android:id="@+id/rlCamera"
+                android:layout_width="130dp"
+                android:layout_height="55dp"
+                android:gravity="center_horizontal|center_vertical">
+
+                <ImageView
+                    android:id="@+id/ivCamera"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="3dp" />
+
+                <TextView
+                    android:id="@+id/tvOptCamera"
+                    android:layout_width="55dp"
+                    android:layout_height="22dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/ivCamera"
+                    android:background="@drawable/round_corner"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:padding="2dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:text="Camera"
+                    android:textColor="@color/blue"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <!--<FrameLayout
+        android:id="@+id/rlNewPhoto"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="10dp">
+
+        <ImageView
+            android:id="@+id/ivPluse"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ic_plus"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+    </FrameLayout>-->
+
+    <!--<TextView
+        android:id="@+id/tvError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/no_shared_pics"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        android:visibility="gone" />-->
+
+    <!--<FrameLayout
+        android:id="@+id/flCameraView"
+        android:layout_width="40dp"
+        android:layout_height="55dp"
+        android:layout_centerVertical="true"
+        android:background="@color/background_color"
+        android:foregroundGravity="left">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical|center"
+            android:background="@drawable/ic_camera"
+            android:padding="10dp" />
+    </FrameLayout>-->
+
+
+</RelativeLayout>

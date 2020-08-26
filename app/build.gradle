@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    compileSdkVersion 28
+    //buildToolsVersion "23.0.3"
+
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
+
+    defaultConfig {
+        applicationId "flashtr.com.flashtr"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 10
+        versionName "2.2"
+        multiDexEnabled true
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    configurations.all {
+        resolutionStrategy {
+            force 'com.android.support:support-v4:28.0.0'
+        }
+    }
+    sourceSets { main { res.srcDirs = ['src/main/res', 'src/main/res/layout'] } }
+}
+
+allprojects {
+    tasks.withType(JavaCompile) {
+        options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+    }
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.jakewharton:butterknife:6.1.0'
+    implementation 'com.crittercism:crittercism-android-agent:5.0.6'
+    //compile 'org.apache.httpcomponents:httpmime:4.1.3'
+    implementation files('libs/universal-image-loader-1.9.2.jar')
+    implementation files('libs/httpmime-4.2.6.jar')
+    implementation files('libs/google-play-services.jar')
+    implementation 'com.balysv:material-ripple:1.0.2'
+
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation project(':mediaChooserlib')
+    implementation 'com.squareup.picasso:picasso:2.5.1'
+    annotationProcessor 'com.google.auto.value:auto-value:1.5.2'
+    implementation project(':multipleimageselect')
+    android {
+        useLibrary 'org.apache.http.legacy'
+    }
+}

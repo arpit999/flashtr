@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/container_dropshadow_lightgrey">
+
+    <TextView
+        android:id="@+id/tv_txtCamera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view1"
+        android:clickable="true"
+        android:gravity="center_vertical|left"
+        android:padding="10dp"
+        android:text="@string/str_camera"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"/>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/tv_txtCamera"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/tv_txtGallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view2"
+        android:clickable="true"
+        android:padding="10dp"
+        android:gravity="center_vertical|left"
+        android:text="@string/str_gallery"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"/>
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/tv_txtGallery"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:background="@android:color/darker_gray"/>
+    <TextView
+        android:id="@+id/tv_txtClose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view3"
+        android:clickable="true"
+        android:padding="10dp"
+        android:gravity="center_vertical|left"
+        android:text="Close"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"/>
+</RelativeLayout>

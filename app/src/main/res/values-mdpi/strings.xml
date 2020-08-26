@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="btn_ok">OK</string>
+    <string name="str_loadingMsg">Loading...</string>
+    <string name="str_close">Close</string>
+
+    <string name="str_new_header1">FLASHTR LOGIN</string>
+    <string name="str_new_login1">Enter Your Mobile Number</string>
+    <string name="str_mobile_hint">eg: 9099090990</string>
+    <string name="str_next">NEXT</string>
+    <string name="str_new_header2">CODE VERIFICATION</string>
+    <string name="str_new_login2">Enter Confirmation Code</string>
+    <string name="str_verify_hint">Enter Verificaition Code</string>
+    <string name="str_back">Back</string>
+    <string name="str_resend">Resend</string>
+    <string name="str_new_header3">PROFILE</string>
+    <string name="str_new_name">Name</string>
+    <string name="str_new_email_optional">Email (Optional)</string>
+    <string name="str_new_submit">SUBMIT</string>
+    <string name="str_new_header4">SETTINGS</string>
+    <string name="str_new_acc">Account</string>
+    <string name="str_new_edit_prof">[Edit Profile]</string>
+    <string name="str_new_update_num">Update Mobile Number</string>
+    <string name="str_new_feedback">Feedback</string>
+    <string name="str_new_shApp">Share Application</string>
+    <string name="str_new_rateApp">Rate Application</string>
+
+</resources>
